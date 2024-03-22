@@ -3,6 +3,7 @@
  * Author: Mike Dawson
  *
  * Created on March 21, 2024, 11:41 AM
+ * Refer to the README.md file for the change log.
  */
 
 #include "globals.h" //A single header file to store references to all necessary headers and other relevant information for simplicity
@@ -24,7 +25,12 @@
 void main(void) {
     /* Here we will initialize the UART port */
     CONSOLE_SETUP();
-    CONSOLE_SEND_STRING("Entering main function. \n\n\r");
+    
+    /* Start our other code to execute */
+    CONSOLE_SEND_STRING("Entering main function. \n\r");
+    CONSOLE_SEND_STRING("Firmware version: ");
+    CONSOLE_SEND_STRING(VERSION_NUMBER);
+    CONSOLE_SEND_STRING("\n\n\r");
     
     
     PORTB = 0x00; //Clear port B

@@ -24,6 +24,8 @@ extern "C" {
 #include "config.h"
 #include "console.h"
 
+#define VERSION_NUMBER "v1.0"
+
 #define _XTAL_FREQ     4000000
 
 #endif	/* GLOBALS_H */
